@@ -1,0 +1,63 @@
+# Fila editorial TM21
+# status: idea | research | draft | review | scheduled | published
+
+- id: preco-site-profissional
+  intent: decisao
+  primary_keyword: quanto custa criar um site
+  related_service: /criacao-de-sites/
+  region: brasil
+  question: Quanto custa criar um site profissional?
+  cta: conversar_sobre_projeto
+  evidence: pricing_interno_sem_expor_valor_hora
+  status: published
+  url: /quanto-custa-criar-um-site/
+
+- id: landing-ou-site
+  intent: decisao
+  primary_keyword: landing page ou site institucional
+  related_service: /landing-pages/
+  region: brasil
+  question: Landing page ou site institucional: qual escolher?
+  cta: diagnostico_de_escopo
+  evidence: processo_tm21
+  status: idea
+
+- id: site-advogado-preco
+  intent: fundo_de_funil
+  primary_keyword: quanto custa site para advogado
+  related_service: /site-para-advogados/
+  region: brasil
+  question: Quanto custa um site para advogado?
+  cta: conversar_sobre_projeto
+  evidence: escopo_e_regras_profissionais_atualizadas
+  status: idea
+
+- id: site-dentista-estrutura
+  intent: comercial
+  primary_keyword: site para dentista o que precisa ter
+  related_service: /site-para-dentistas/
+  region: brasil
+  question: O que um site para dentista precisa ter?
+  cta: ver_projeto_e_conversar
+  evidence: regras_profissionais_atualizadas
+  status: idea
+
+- id: criacao-site-porto-alegre
+  intent: local_comercial
+  primary_keyword: criação de sites Porto Alegre
+  related_service: /rio-grande-do-sul/
+  region: porto_alegre_rs
+  question: Como funciona a criação de sites em Porto Alegre e região?
+  cta: conversar_sobre_projeto
+  evidence: somente_quando_houver_conteudo_local_real
+  status: idea
+
+- id: criacao-site-florianopolis
+  intent: local_comercial
+  primary_keyword: criação de sites Florianópolis
+  related_service: /santa-catarina/
+  region: florianopolis_sc
+  question: Como funciona a criação de sites para empresas de Florianópolis?
+  cta: conversar_sobre_projeto
+  evidence: somente_quando_houver_conteudo_local_real
+  status: idea

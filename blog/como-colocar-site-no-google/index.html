@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<script defer="" src="/js/consent.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<meta content="#080C11" name="theme-color"/>
+<title>Como colocar um site no Google em 2026? Search Console | TM21</title>
+<meta content="Passo a passo para verificar indexação, configurar Search Console, enviar sitemap, diagnosticar páginas ausentes e medir SEO com Analytics em 2026." name="description"/>
+<link href="https://tm21.com.br/blog/como-colocar-site-no-google/" rel="canonical"/>
+<meta content="Como colocar um site no Google em 2026? Search Console | TM21" property="og:title"/>
+<meta content="Passo a passo para verificar indexação, configurar Search Console, enviar sitemap, diagnosticar páginas ausentes e medir SEO com Analytics em 2026." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://tm21.com.br/blog/como-colocar-site-no-google/" property="og:url"/>
+<meta content="https://tm21.com.br/assets/blog-google-1280.webp" property="og:image"/>
+<meta content="1280" property="og:image:width"/>
+<meta content="720" property="og:image:height"/>
+<meta content="Profissional analisando dashboard de busca, indexação e desempenho de um site em um escritório moderno." property="og:image:alt"/>
+<meta content="2026-10-03T00:00:00-03:00" property="article:published_time"/>
+<meta content="2026-10-04T00:00:00-03:00" property="article:modified_time"/>
+<meta content="SEO" property="article:section"/>
+<meta content="Thiago Martins" property="article:author"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter+Tight:wght@400;500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter+Tight:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="/css/styles.css" rel="stylesheet"/>
+<link href="https://tm21.com.br/blog/feed.xml" rel="alternate" title="TM21 — Blog" type="application/rss+xml"/>
+<style>
+  .article-hero--v21 {
+    padding: calc(var(--header-h) + 56px) 0 34px;
+    background: var(--cream);
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-light);
+  }
+  .article-hero--v21 .seo-breadcrumb {
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  .article-hero--v21 .eyebrow {
+    justify-content: center;
+    color: var(--blue);
+  }
+  .article-hero--v21__copy {
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .article-hero--v21 h1 {
+    max-width: 980px;
+    margin: 16px auto 18px;
+    font-size: clamp(2.85rem, 5.1vw, 5rem);
+    line-height: .96;
+    letter-spacing: -.05em;
+  }
+  .article-hero--v21 .article-hero__dek {
+    max-width: 820px;
+    margin: 0 auto 30px;
+    color: var(--text-dark-muted);
+    font-size: 1.15rem;
+    line-height: 1.72;
+  }
+  .article-meta--v21 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 18px 24px;
+    margin-bottom: 28px;
+    color: var(--text-dark-muted);
+    font-size: .95rem;
+  }
+  .article-meta--v21 span strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+  .article-author-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 18px;
+    margin: 0 auto 30px;
+    border: 1px solid var(--border-light);
+    background: rgba(255,255,255,.78);
+  }
+  .article-author-badge__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    background: linear-gradient(135deg, #0f1720 0%, #173149 100%);
+  }
+  .article-author-badge small {
+    display: block;
+    color: var(--text-dark-muted);
+    font-size: .84rem;
+    margin-bottom: 2px;
+  }
+  .article-author-badge strong {
+    display: block;
+    color: var(--text-dark);
+    font-size: 1rem;
+  }
+  .article-hero-media {
+    padding: 8px 0 54px;
+    background: var(--cream);
+  }
+  .article-hero-media figure {
+    margin: 0;
+    border: 1px solid var(--border-light);
+    background: #fff;
+    box-shadow: 0 24px 70px rgba(17,22,28,.08);
+    overflow: hidden;
+  }
+  .article-hero-media img { width: 100%; height: auto; }
+  .article-hero-media figcaption {
+    padding: 14px 18px;
+    color: var(--text-dark-muted);
+    font-size: .92rem;
+    line-height: 1.5;
+    border-top: 1px solid var(--border-light);
+    background: rgba(255,255,255,.94);
+  }
+  .article-shell--v21 { border-top: 1px solid var(--border-light); }
+  .article-layout-v21 {
+    width: min(calc(100% - 48px), 1380px);
+    margin-inline: auto;
+    padding: 78px 0 118px;
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr) 280px;
+    gap: clamp(28px, 4vw, 44px);
+    align-items: start;
+  }
+  .article-toc,
+  .article-sidecards {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+    align-self: start;
+  }
+  .article-toc__box,
+  .article-sidecards__card {
+    border: 1px solid var(--border-light);
+    background: rgba(255,255,255,.74);
+    box-shadow: 0 14px 36px rgba(17,22,28,.04);
+  }
+  .article-toc__box {
+    padding: 24px 22px 22px;
+  }
+  .article-toc__title {
+    margin: 0 0 12px;
+    font-size: clamp(1.6rem, 2vw, 2.2rem);
+    line-height: .98;
+    letter-spacing: -.05em;
+    font-weight: 500;
+  }
+  .article-toc__rule {
+    width: 100%;
+    height: 8px;
+    margin-bottom: 18px;
+    background: rgba(17,22,28,.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .article-toc__rule::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--toc-progress, 0%);
+    background: rgba(54,125,249,.72);
+    transition: width .12s linear;
+  }
+  .article-toc__label {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--blue);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .article-toc nav {
+    display: grid;
+    gap: 10px;
+    max-height: 520px;
+    overflow: auto;
+    padding-right: 6px;
+  }
+  .article-toc nav a {
+    color: var(--text-dark-muted);
+    font-size: 1rem;
+    line-height: 1.45;
+    transition: color .2s ease, transform .2s ease;
+  }
+  .article-toc nav a:hover,
+  .article-toc nav a:focus-visible {
+    color: var(--text-dark);
+    transform: translateX(2px);
+  }
+  .article-toc nav a.is-active {
+    color: var(--text-dark);
+    font-weight: 700;
+  }
+  .article-sidecards { display: grid; gap: 18px; }
+  .article-sidecards__card { padding: 22px; }
+  .article-sidecards__card--dark {
+    color: var(--text-light);
+    background: linear-gradient(180deg, #0d1720 0%, #132230 100%);
+    border-color: rgba(255,255,255,.08);
+  }
+  .article-sidecards__card h3 {
+    margin: 10px 0 12px;
+    font-size: 1.55rem;
+    line-height: 1.04;
+    letter-spacing: -.04em;
+  }
+  .article-sidecards__card p {
+    margin: 0 0 16px;
+    line-height: 1.65;
+    color: inherit;
+  }
+  .article-sidecards__card ul {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 10px;
+    color: inherit;
+  }
+  .article-sidecards__card li { line-height: 1.5; }
+  .article-sidecards__card a { color: inherit; }
+  .article-sidecards__card a:hover { color: var(--blue-light); }
+  .article-sidecards__tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 10px;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    font-size: .72rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    opacity: .9;
+  }
+  .article-sidecards__card--dark .button { margin-top: 6px; }
+  .article-content--v21 {
+    min-width: 0;
+    max-width: 820px;
+  }
+  .article-content--v21 > p,
+  .article-content--v21 li {
+    color: #46505a;
+    font-size: 1.07rem;
+    line-height: 1.82;
+  }
+  .article-content--v21 h2 {
+    scroll-margin-top: calc(var(--header-h) + 24px);
+    margin: 66px 0 20px;
+    font-size: clamp(2.1rem, 3.25vw, 3.3rem);
+    line-height: 1.02;
+    letter-spacing: -.045em;
+    font-weight: 500;
+  }
+  .article-content--v21 h3 {
+    margin: 34px 0 12px;
+    font-size: 1.38rem;
+    line-height: 1.18;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  .article-content--v21 a:not(.button) {
+    color: var(--blue);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: .18em;
+  }
+  .article-content--v21 a:not(.button):hover { color: #1f5dcc; }
+  .article-summary-box {
+    margin: 0 0 28px;
+    padding: 24px 26px;
+    border-left: 3px solid var(--blue);
+    background: #fff;
+    box-shadow: 0 14px 36px rgba(17,22,28,.055);
+  }
+  .article-summary-box > span,
+  .article-note > span,
+  .article-data-card__eyebrow,
+  .article-inline-cta__copy > span,
+  .article-faq-intro > span,
+  .article-share > span,
+  .article-sources > span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--blue);
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .article-summary-box p,
+  .article-note p { margin: 0; }
+  .article-question-box {
+    margin: 0 0 30px;
+    padding: 24px 26px;
+    border: 1px solid rgba(54,125,249,.28);
+    background: rgba(54,125,249,.05);
+    color: var(--text-dark);
+    font-size: 1.16rem;
+    font-weight: 600;
+    line-height: 1.55;
+  }
+  .article-note {
+    margin: 24px 0 28px;
+    padding: 18px 20px;
+    border: 1px solid var(--border-light);
+    background: rgba(255,255,255,.8);
+  }
+  .article-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 640px;
+    background: rgba(255,255,255,.82);
+  }
+  .article-table caption {
+    text-align: left;
+    margin-bottom: 12px;
+    color: var(--text-dark-muted);
+    font-size: .95rem;
+  }
+  .article-table th,
+  .article-table td {
+    padding: 16px 18px;
+    border: 1px solid var(--border-light);
+    vertical-align: top;
+    text-align: left;
+  }
+  .article-table th {
+    color: var(--text-light);
+    background: #0d1720;
+    font-size: .94rem;
+    font-weight: 600;
+    letter-spacing: .01em;
+  }
+  .article-table td strong { color: var(--text-dark); }
+  .table-scroll {
+    overflow-x: auto;
+    margin: 24px 0 30px;
+    border: 1px solid var(--border-light);
+    background: rgba(255,255,255,.82);
+  }
+  .table-scroll .article-table { margin: -1px; border: 0; }
+  .article-grid-points {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin: 24px 0 34px;
+    border: 1px solid var(--border-light);
+    background: var(--border-light);
+  }
+  .article-grid-points > div {
+    padding: 22px 22px 20px;
+    background: rgba(255,255,255,.76);
+  }
+  .article-grid-points strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    font-size: 1.02rem;
+  }
+  .article-grid-points p {
+    margin: 0;
+    color: var(--text-dark-muted);
+    line-height: 1.68;
+  }
+  .article-data-card {
+    margin: 28px 0 36px;
+    padding: 28px 28px 24px;
+    color: var(--text-light);
+    background: linear-gradient(180deg, #07121c 0%, #0b1b2b 100%);
+    box-shadow: 0 24px 60px rgba(6,14,24,.16);
+  }
+  .article-data-card p {
+    margin: 0 0 18px;
+    color: var(--text-light);
+    line-height: 1.72;
+  }
+  .article-data-card strong { color: #f4c56c; }
+  .article-data-card__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin: 18px 0 0;
+    background: rgba(255,255,255,.12);
+  }
+  .article-data-card__grid div {
+    padding: 18px 16px;
+    background: rgba(255,255,255,.02);
+  }
+  .article-data-card__grid span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: .82rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  .article-data-card__grid strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #fff;
+    font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+    line-height: 1;
+  }
+  .article-inline-cta--v21 {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    gap: 26px;
+    align-items: center;
+    margin: 46px 0 56px;
+    padding: 24px 26px;
+    background: #11161c;
+    color: var(--text-light);
+  }
+  .article-inline-cta__copy p {
+    max-width: 620px;
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .article-step-list {
+    display: grid;
+    gap: 28px;
+    margin: 28px 0 10px;
+  }
+  .article-step {
+    display: grid;
+    grid-template-columns: 82px minmax(0,1fr);
+    gap: 24px;
+    align-items: start;
+  }
+  .article-step__index {
+    position: relative;
+    display: grid;
+    gap: 14px;
+    justify-items: center;
+  }
+  .article-step__index::after {
+    content: "";
+    width: 1px;
+    height: calc(100% + 28px);
+    background: rgba(54,125,249,.28);
+  }
+  .article-step:last-child .article-step__index::after { display: none; }
+  .article-step__badge {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: #0f1720;
+  }
+  .article-step__content h3 {
+    margin: 2px 0 10px;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(1.7rem, 2.4vw, 2.15rem);
+    font-weight: 400;
+    letter-spacing: -.03em;
+  }
+  .article-step__content p { margin: 0 0 12px; }
+  .article-faq {
+    margin-top: 30px;
+    display: grid;
+    gap: 12px;
+  }
+  .article-faq details {
+    border: 1px solid var(--border-light);
+    background: rgba(255,255,255,.78);
+  }
+  .article-faq summary {
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    padding: 20px 56px 20px 22px;
+    font-size: 1.32rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  .article-faq summary::-webkit-details-marker { display: none; }
+  .article-faq summary::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(54,125,249,.36);
+    border-radius: 50%;
+    color: var(--blue);
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+  .article-faq details[open] summary::after { content: "–"; }
+  .article-faq__answer {
+    padding: 0 22px 22px;
+    color: #46505a;
+    line-height: 1.76;
+  }
+  .article-faq__answer p { margin: 0; }
+  .article-share {
+    margin-top: 52px;
+    padding-top: 26px;
+    border-top: 1px solid var(--border-light);
+    text-align: center;
+  }
+  .article-share h2 {
+    margin: 0 0 20px;
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    line-height: .98;
+    letter-spacing: -.05em;
+    font-weight: 500;
+  }
+  .article-share__links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .article-share__links a {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #8e3a26;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: 700;
+    transition: transform .2s ease, background .2s ease;
+  }
+  .article-share__links a:hover {
+    background: #6f2919;
+    transform: translateY(-2px);
+  }
+  .article-sources {
+    margin-top: 46px;
+    padding: 24px 0 0;
+    border-top: 1px solid var(--border-light);
+  }
+  .article-sources ul {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 10px;
+  }
+  .article-sources li {
+    color: #46505a;
+    line-height: 1.68;
+  }
+  .article-related--v21 {
+    margin-top: 48px;
+    padding-top: 26px;
+    border-top: 1px solid var(--border-light);
+  }
+  .article-related--v21 > a {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-dark);
+  }
+  .article-related--v21 > a span { color: var(--blue); }
+  .article-related--v21 > a:hover { color: var(--blue); }
+  .article-contact__intro--v21 .text-link { margin-top: 10px; }
+  @media (max-width: 1180px) {
+    .article-layout-v21 {
+      grid-template-columns: minmax(0, 1fr);
+      width: min(calc(100% - 48px), 860px);
+    }
+    .article-toc,
+    .article-sidecards,
+    .article-contact__intro { position: static; }
+    .article-toc { order: -1; }
+    .article-sidecards { order: 2; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 760px) {
+    .article-hero--v21 { padding-top: calc(var(--header-h) + 42px); }
+    .article-hero--v21 .article-hero__dek { font-size: 1.05rem; }
+    .article-meta--v21 { justify-content: flex-start; }
+    .article-author-badge { margin-inline: 0; }
+    .article-layout-v21 { width: min(calc(100% - 24px), 860px); padding: 60px 0 96px; }
+    .article-grid-points,
+    .article-data-card__grid,
+    .article-sidecards,
+    .article-inline-cta--v21 { grid-template-columns: 1fr; }
+    .article-content--v21 h2 { margin-top: 54px; }
+    .article-step { grid-template-columns: 1fr; gap: 14px; }
+    .article-step__index { justify-items: start; }
+    .article-step__index::after { display: none; }
+    .article-table { min-width: 560px; }
+    .article-faq summary { font-size: 1.16rem; }
+  }
+
+  /* V21.1: contraste do breadcrumb sobre hero claro */
+  .article-hero--v21 .seo-breadcrumb,
+  .article-hero--v21 .seo-breadcrumb a,
+  .article-hero--v21 .seo-breadcrumb span {
+    color: var(--text-dark-muted);
+  }
+  .article-hero--v21 .seo-breadcrumb a:hover,
+  .article-hero--v21 .seo-breadcrumb a:focus-visible {
+    color: var(--text-dark);
+  }
+
+  /* V21.1: tabelas viram cartões no celular em vez de exigir rolagem lateral */
+  @media (max-width: 760px) {
+    .table-scroll {
+      overflow: visible;
+      border: 0;
+      background: transparent;
+    }
+    .table-scroll .article-table {
+      min-width: 0;
+      width: 100%;
+      margin: 0;
+      border: 0;
+      background: transparent;
+    }
+    .article-table caption {
+      margin: 0 0 14px;
+      padding: 0 2px;
+    }
+    .article-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .article-table tbody,
+    .article-table tr,
+    .article-table td {
+      display: block;
+      width: 100%;
+    }
+    .article-table tr {
+      margin: 0 0 14px;
+      border: 1px solid var(--border-light);
+      background: rgba(255,255,255,.82);
+      box-shadow: 0 8px 24px rgba(17,22,28,.035);
+    }
+    .article-table td {
+      padding: 14px 16px 16px;
+      border: 0;
+      border-bottom: 1px solid var(--border-light);
+      color: #46505a;
+    }
+    .article-table td:last-child {
+      border-bottom: 0;
+    }
+    .article-table td::before {
+      content: attr(data-label);
+      display: block;
+      margin-bottom: 5px;
+      color: var(--text-dark-muted);
+      font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .075em;
+      text-transform: uppercase;
+    }
+    .article-table td:first-child {
+      padding-top: 17px;
+    }
+    .article-table td:first-child strong {
+      font-size: 1.08rem;
+    }
+  }
+
+
+
+  .timeline-clocks {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1px;
+    margin:28px 0 36px;
+    border:1px solid var(--border-light);
+    background:var(--border-light);
+  }
+  .timeline-clocks > div { padding:22px; background:rgba(255,255,255,.8); }
+  .timeline-clocks span { display:block; margin-bottom:8px; color:var(--blue); font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; }
+  .timeline-clocks strong { display:block; margin-bottom:10px; color:var(--text-dark); font-size:1.18rem; }
+  .timeline-clocks p { margin:0; color:var(--text-dark-muted); line-height:1.65; }
+  .project-timeline {
+    margin:28px 0 36px;
+    border:1px solid var(--border-light);
+    background:rgba(255,255,255,.82);
+  }
+  .project-timeline__head { padding:20px 22px; border-bottom:1px solid var(--border-light); }
+  .project-timeline__head strong { display:block; margin-bottom:6px; color:var(--text-dark); font-size:1.15rem; }
+  .project-timeline__head p { margin:0; color:var(--text-dark-muted); line-height:1.6; }
+  .project-timeline__row { display:grid; grid-template-columns:150px minmax(0,1fr); gap:18px; align-items:center; padding:16px 22px; border-bottom:1px solid var(--border-light); }
+  .project-timeline__row:last-child { border-bottom:0; }
+  .project-timeline__label { color:var(--text-dark); font-weight:600; }
+  .project-timeline__track { height:12px; position:relative; background:rgba(17,22,28,.08); overflow:hidden; }
+  .project-timeline__track span { position:absolute; top:0; bottom:0; left:var(--start); width:var(--size); background:rgba(54,125,249,.72); }
+  .project-timeline__row:nth-child(even) .project-timeline__track span { background:rgba(15,23,32,.72); }
+  .deadline-estimator {
+    margin:30px 0 42px;
+    padding:28px;
+    border:1px solid rgba(54,125,249,.28);
+    background:rgba(54,125,249,.045);
+  }
+  .deadline-estimator__head h3 { margin:4px 0 10px; font-family:"Instrument Serif",Georgia,serif; font-size:clamp(2rem,3vw,2.7rem); font-weight:400; letter-spacing:-.035em; }
+  .deadline-estimator__head p { margin:0 0 22px; color:var(--text-dark-muted); line-height:1.7; }
+  .deadline-estimator__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+  .deadline-estimator label { display:grid; gap:8px; color:var(--text-dark); font-weight:600; line-height:1.35; }
+  .deadline-estimator select {
+    width:100%; min-height:50px; padding:0 42px 0 14px;
+    border:1px solid var(--border-light); background:#fff; color:var(--text-dark);
+    font:inherit; font-weight:400; border-radius:0;
+  }
+  .deadline-estimator select[aria-invalid="true"] { border-color:#a13a2a; outline:2px solid rgba(161,58,42,.1); }
+  .deadline-estimator__actions { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-top:20px; }
+  .deadline-estimator__actions small { color:var(--text-dark-muted); max-width:520px; line-height:1.5; }
+  .deadline-estimator__result { margin-top:22px; padding:22px 24px; color:var(--text-light); background:#0d1720; }
+  .deadline-estimator__result > span { display:block; margin-bottom:9px; color:#8eb5ff; font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; }
+  .deadline-estimator__result > strong { display:block; margin-bottom:8px; color:#fff; font-size:1.45rem; }
+  .deadline-estimator__result p { margin:0 0 10px; color:#d8dee6; line-height:1.7; }
+  .deadline-estimator__result ul { margin:10px 0 12px; padding-left:18px; color:#d8dee6; display:grid; gap:6px; }
+  .deadline-estimator__result small { color:#9ba8b5; line-height:1.5; }
+  .definition-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; margin:26px 0 34px; background:var(--border-light); border:1px solid var(--border-light); }
+  .definition-grid > div { padding:20px 22px; background:rgba(255,255,255,.82); }
+  .definition-grid strong { display:block; margin-bottom:8px; color:var(--text-dark); }
+  .definition-grid p { margin:0; color:var(--text-dark-muted); line-height:1.65; }
+  .article-source-note { margin:24px 0 32px; padding:20px 22px; border-left:3px solid var(--blue); background:rgba(255,255,255,.78); }
+  .article-source-note strong { display:block; margin-bottom:8px; color:var(--text-dark); }
+  .article-source-note p { margin:0; color:var(--text-dark-muted); line-height:1.7; }
+  @media (max-width:760px) {
+    .timeline-clocks, .deadline-estimator__grid, .definition-grid { grid-template-columns:1fr; }
+    .project-timeline__row { grid-template-columns:1fr; gap:8px; }
+    .deadline-estimator { padding:22px 18px; }
+  }
+
+  .google-flow {
+    display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px;
+    margin:28px 0 36px; border:1px solid var(--border-light); background:var(--border-light);
+  }
+  .google-flow > div { padding:22px 20px; background:rgba(255,255,255,.82); }
+  .google-flow span { display:block; margin-bottom:8px; color:var(--blue); font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; font-size:.72rem; font-weight:700; letter-spacing:.08em; }
+  .google-flow strong { display:block; margin-bottom:9px; color:var(--text-dark); font-size:1.08rem; }
+  .google-flow p { margin:0; color:var(--text-dark-muted); line-height:1.62; }
+  .index-diagnostic { margin:30px 0 42px; padding:28px; color:var(--text-light); background:linear-gradient(180deg,#07121c 0%,#0b1b2b 100%); box-shadow:0 24px 60px rgba(6,14,24,.15); }
+  .index-diagnostic__head h3 { margin:7px 0 10px; color:#fff; font-family:"Instrument Serif",Georgia,serif; font-size:clamp(2rem,3vw,2.8rem); font-weight:400; letter-spacing:-.035em; }
+  .index-diagnostic__head p { margin:0 0 22px; color:#c7d0d9; line-height:1.7; }
+  .index-diagnostic__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+  .index-diagnostic label { display:grid; gap:8px; color:#dce3ea; font-size:.95rem; }
+  .index-diagnostic select { width:100%; min-height:50px; padding:0 14px; color:#11161c; background:#fff; border:1px solid rgba(255,255,255,.24); border-radius:0; font:inherit; }
+  .index-diagnostic select[aria-invalid="true"] { outline:2px solid #f4c56c; outline-offset:2px; }
+  .index-diagnostic__actions { display:flex; align-items:center; flex-wrap:wrap; gap:14px; margin-top:18px; }
+  .index-diagnostic__actions small { max-width:560px; color:#9ba8b5; line-height:1.5; }
+  .index-diagnostic__result { margin-top:18px; padding:20px; border:1px solid rgba(244,197,108,.38); background:rgba(255,255,255,.055); }
+  .index-diagnostic__result > span { display:block; margin-bottom:8px; color:#f4c56c; font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; }
+  .index-diagnostic__result strong { display:block; margin-bottom:8px; color:#fff; font-size:1.35rem; }
+  .index-diagnostic__result p { margin:0 0 10px; color:#d8dee6; line-height:1.68; }
+  .index-diagnostic__result small { color:#9ba8b5; line-height:1.5; }
+  .metric-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; margin:24px 0 32px; border:1px solid var(--border-light); background:var(--border-light); }
+  .metric-pair > div { padding:24px; background:rgba(255,255,255,.82); }
+  .metric-pair h3 { margin:0 0 10px; font-size:1.45rem; }
+  .metric-pair p { margin:0 0 12px; color:var(--text-dark-muted); line-height:1.7; }
+  .metric-pair ul { margin:0; padding-left:18px; display:grid; gap:7px; color:var(--text-dark-muted); }
+  @media (max-width:900px){ .google-flow { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:760px){ .google-flow, .index-diagnostic__grid, .metric-pair { grid-template-columns:1fr; } .index-diagnostic { padding:22px 18px; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://tm21.com.br/blog/como-colocar-site-no-google/#article","headline":"Como colocar um site no Google?","description":"Passo a passo para verificar indexação, configurar Search Console, enviar sitemap, diagnosticar páginas ausentes e medir SEO com Analytics em 2026.","datePublished":"2026-10-03","dateModified":"2026-10-04","inLanguage":"pt-BR","mainEntityOfPage":{"@id":"https://tm21.com.br/blog/como-colocar-site-no-google/#webpage"},"articleSection":"SEO","author":{"@id":"https://tm21.com.br/#thiago-martins"},"publisher":{"@id":"https://tm21.com.br/#thiago-martins"},"image":"https://tm21.com.br/assets/blog-google-1280.webp","keywords":["como colocar site no Google","como aparecer no Google","Google Search Console","indexação Google","sitemap","site não aparece no Google","SEO 2026"]},{"@type":"WebPage","@id":"https://tm21.com.br/blog/como-colocar-site-no-google/#webpage","url":"https://tm21.com.br/blog/como-colocar-site-no-google/","name":"Como colocar um site no Google em 2026? Search Console | TM21","description":"Passo a passo para verificar indexação, configurar Search Console, enviar sitemap, diagnosticar páginas ausentes e medir SEO com Analytics em 2026.","inLanguage":"pt-BR","isPartOf":{"@id":"https://tm21.com.br/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TM21","item":"https://tm21.com.br/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tm21.com.br/blog/"},{"@type":"ListItem","position":3,"name":"Como colocar um site no Google?","item":"https://tm21.com.br/blog/como-colocar-site-no-google/"}]}]}</script>
+</head>
+<body class="seo-page article-page" id="top">
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header is-scrolled" id="siteHeader"><div class="shell site-header__inner">
+<a aria-label="TM21, página inicial" class="brand" href="/">TM21</a>
+<nav aria-label="Navegação principal" class="desktop-nav"><a href="/criacao-de-sites/">Serviços</a><a href="/#projetos">Projetos</a><a href="/#regioes">RS &amp; SC</a><a href="/blog/">Blog</a><a href="/#contato">Contato</a></nav>
+<a class="header-cta" href="https://wa.me/5551997890145?text=Ol%C3%A1%2C%20Thiago.%20Encontrei%20seu%20site%20TM21%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." rel="noopener noreferrer" target="_blank">Conversar <span aria-hidden="true">↗</span></a>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu" class="menu-toggle" type="button"><span></span><span></span></button>
+</div></header>
+<div aria-hidden="true" class="mobile-menu" id="mobileMenu"><nav aria-label="Navegação mobile"><a href="/criacao-de-sites/">Serviços</a><a href="/#projetos">Projetos</a><a href="/#regioes">RS &amp; SC</a><a href="/blog/">Blog</a><a href="/#contato">Contato</a></nav><a class="button button--light" href="https://wa.me/5551997890145?text=Ol%C3%A1%2C%20Thiago.%20Encontrei%20seu%20site%20TM21%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." rel="noopener noreferrer" target="_blank">Conversar no WhatsApp <span>↗</span></a></div>
+<div aria-label="Faixa animada com entregáveis TM21" class="offer-ticker"><div class="offer-ticker__track"><span>Criação de sites</span><span>Landing pages</span><span>Sites institucionais</span><span>SEO básico</span><span>WhatsApp e formulários</span><span>Publicação e domínio</span><span>Projetos no RS e SC</span></div><div aria-hidden="true" class="offer-ticker__track"><span>Criação de sites</span><span>Landing pages</span><span>Sites institucionais</span><span>SEO básico</span><span>WhatsApp e formulários</span><span>Publicação e domínio</span><span>Projetos no RS e SC</span></div></div>
+<main class="article-main" id="conteudo">
+<section class="article-hero article-hero--v21">
+<div class="shell article-hero--v21__copy">
+<nav aria-label="Breadcrumb" class="seo-breadcrumb"><a href="/">TM21</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>SEO</span></nav>
+<p class="eyebrow">SEO</p>
+<h1>Como colocar um site no Google?</h1>
+<p class="article-hero__dek">Publicar o site deixa a página acessível. Para aparecer na Pesquisa, ainda entram descoberta, rastreamento, indexação, intenção de busca, sinais locais e acompanhamento. Este guia organiza o caminho técnico e mostra como diagnosticar o ponto em que uma página está travando.</p>
+<div aria-label="Metadados do artigo" class="article-meta article-meta--v21"><span><strong>Criado:</strong> <time datetime="2026-10-03">03 de outubro de 2026</time></span><span><strong>Atualizado:</strong> <time datetime="2026-10-04">04 de outubro de 2026</time></span><span><strong>Leitura:</strong> <span data-read-time="">16 min</span></span></div>
+<div aria-label="Autoria do artigo" class="article-author-badge"><div aria-hidden="true" class="article-author-badge__avatar">TM</div><div><small>Autor</small><strong>Thiago Martins</strong></div></div>
+</div>
+</section>
+<section class="article-hero-media"><div class="shell"><figure>
+<img alt="Profissional analisando dashboard de busca, indexação e desempenho de um site em um escritório moderno." decoding="async" fetchpriority="high" height="720" loading="eager" sizes="(max-width: 720px) calc(100vw - 24px), (max-width: 1280px) calc(100vw - 48px), 1200px" src="/assets/blog-google-1280.webp" srcset="/assets/blog-google-720.webp 720w, /assets/blog-google-1280.webp 1280w" width="1280"/>
+<figcaption>Aparecer no Google envolve etapas diferentes: o buscador precisa descobrir a URL, conseguir rastreá-la, decidir indexá-la e depois encontrar motivo para exibi-la em uma consulta específica.</figcaption>
+</figure></div></section>
+<section class="article-shell article-shell--v21 section-light">
+<div class="article-layout-v21">
+<aside aria-label="Navegação do artigo" class="article-toc">
+<div class="article-toc__box">
+<h2 class="article-toc__title">Navegue pelo índice</h2>
+<div aria-hidden="true" class="article-toc__rule"></div>
+<span class="article-toc__label">Ir para:</span>
+<nav><a href="#resposta">Como colocar o site no Google em 2026</a><a href="#diagnostico">Descoberto, indexado ou mal posicionado?</a><a href="#passos">Passo a passo de configuração</a><a href="#search-console">O papel do Search Console</a><a href="#nao-aparece">Por que o site ainda não aparece</a><a href="#ferramenta">Diagnóstico de indexação</a><a href="#analytics">Search Console + Analytics</a><a href="#local">Negócio local: site + Perfil da Empresa</a><a href="#ia">Pesquisa com IA em 2026</a><a href="#bing">E o Bing e o Microsoft Edge?</a><a href="#tm21">O que entra na publicação da TM21</a><a href="#faq">Perguntas frequentes</a></nav>
+</div>
+</aside>
+<article class="article-content article-content--v21">
+<div class="article-summary-box" id="resposta">
+<span>RESPOSTA CURTA</span>
+<p>Para colocar um site no Google em 2026, confirme que as páginas estão públicas e indexáveis, verifique o domínio no Google Search Console, envie o sitemap, inspecione as URLs prioritárias e conecte as páginas com links internos. Depois, o trabalho muda: indexação apenas torna a página elegível para aparecer. A posição depende da consulta, da qualidade e utilidade do conteúdo, da concorrência, de sinais de confiança e, em buscas locais, também do Perfil da Empresa no Google.</p>
+</div>
+<div class="article-question-box">Cadastrar o domínio no Search Console resolve a configuração da propriedade. Isso não obriga o Google a indexar cada página nem coloca o site automaticamente nas primeiras posições.</div>
+<p>Essa diferença explica boa parte da frustração de quem publica um site novo. Tutoriais mostram a verificação do domínio, o painel fica verde e a expectativa passa a ser encontrar a empresa imediatamente em qualquer pesquisa. Os próprios comentários desses conteúdos repetem a dúvida: a propriedade foi criada, mas o site continua sem aparecer.</p>
+<p>A documentação do <a href="https://support.google.com/webmasters/answer/9012289?hl=pt-BR" rel="noopener noreferrer" target="_blank">Google Search Console</a> é mais precisa. Uma solicitação de indexação pode levar de dias a semanas e não garante entrada no índice. Para várias URLs, o Google recomenda sitemap. O caminho útil, portanto, começa identificando se o problema é descoberta, rastreamento, indexação ou posicionamento.</p>
+<h2 id="diagnostico">Antes de mexer no SEO, descubra em qual etapa o site está</h2>
+<p>A frase “o site não aparece no Google” pode descrever situações diferentes. Tratar todas como problema de SEO costuma desperdiçar tempo porque a correção depende do estágio em que a URL parou.</p>
+<div class="google-flow">
+<div><span>01</span><strong>Descoberta</strong><p>O Google precisa conhecer a URL. Links internos, sitemap e links externos ajudam nessa descoberta.</p></div>
+<div><span>02</span><strong>Rastreamento</strong><p>O Googlebot precisa conseguir acessar a página, receber uma resposta válida e ler o conteúdo necessário.</p></div>
+<div><span>03</span><strong>Indexação</strong><p>Depois do rastreamento, o Google decide se aquela URL entra no índice e qual versão considera canônica.</p></div>
+<div><span>04</span><strong>Exibição</strong><p>Uma página indexada ainda precisa ser considerada útil e relevante para uma pesquisa concreta.</p></div>
+</div>
+<div class="table-scroll"><table class="article-table">
+<caption>O mesmo sintoma pode exigir correções completamente diferentes.</caption>
+<thead><tr><th>Situação</th><th>O que significa</th><th>Primeiro lugar para olhar</th></tr></thead>
+<tbody>
+<tr><td data-label="Situação"><strong>O Google nunca viu a URL</strong></td><td data-label="O que significa">Problema de descoberta ou site muito novo.</td><td data-label="Primeiro lugar para olhar">Sitemap, links internos e Inspeção de URL.</td></tr>
+<tr><td data-label="Situação"><strong>URL bloqueada ou não indexável</strong></td><td data-label="O que significa">Robots, noindex, resposta HTTP ou outra configuração impede a indexação.</td><td data-label="Primeiro lugar para olhar">Teste do URL publicado no Search Console.</td></tr>
+<tr><td data-label="Situação"><strong>Rastreada, mas não indexada</strong></td><td data-label="O que significa">O Google acessou a página e ainda não a colocou no índice.</td><td data-label="Primeiro lugar para olhar">Conteúdo, duplicidade, canonical, links internos e tempo desde a publicação.</td></tr>
+<tr><td data-label="Situação"><strong>URL está no Google, mas não aparece para o serviço</strong></td><td data-label="O que significa">A indexação está resolvida. A disputa passa para intenção, relevância, competição e sinais locais ou de autoridade.</td><td data-label="Primeiro lugar para olhar">Consultas no Search Console, página de serviço e SERP da busca desejada.</td></tr>
+</tbody></table></div>
+<p>Uma busca rápida com <code>site:exemplo.com.br</code> ajuda a verificar se existem páginas do domínio no índice. Para diagnóstico de uma URL específica, a <a href="https://support.google.com/webmasters/answer/9012289?hl=pt-BR" rel="noopener noreferrer" target="_blank">Inspeção de URL</a> é mais útil porque mostra o que o Google sabe sobre a página, se o rastreamento é permitido e qual canônica foi selecionada.</p>
+<h2 id="passos">Passo a passo para colocar um site novo no Google</h2>
+<p>O processo abaixo funciona independentemente de WordPress, Wix, código próprio ou outra plataforma. O caminho de menus muda; a lógica de propriedade, rastreamento e indexação continua a mesma.</p>
+<div class="article-step-list">
+<div class="article-step"><div class="article-step__index"><div class="article-step__badge">01</div></div><div class="article-step__content"><h3>Confirme que o site está realmente público</h3><p>O domínio precisa abrir em HTTPS, sem tela de manutenção, senha, redirecionamento quebrado ou bloqueio de produção. Também vale conferir se as páginas importantes não carregam uma instrução <code>noindex</code> e se o <code>robots.txt</code> não impede o rastreamento necessário.</p></div></div>
+<div class="article-step"><div class="article-step__index"><div class="article-step__badge">02</div></div><div class="article-step__content"><h3>Adicione o domínio ao Google Search Console</h3><p>Para um site completo, a <a href="https://support.google.com/webmasters/answer/34592?hl=pt-BR" rel="noopener noreferrer" target="_blank">propriedade de domínio</a> costuma ser a escolha mais abrangente porque reúne protocolos e subdomínios. A verificação é feita por DNS. A propriedade de prefixo de URL continua válida quando o objetivo é acompanhar apenas uma parte específica.</p></div></div>
+<div class="article-step"><div class="article-step__index"><div class="article-step__badge">03</div></div><div class="article-step__content"><h3>Envie o sitemap e mantenha URLs canônicas coerentes</h3><p>O sitemap ajuda o Google a descobrir URLs importantes e permite acompanhar erros de leitura no Search Console. O próprio Google ressalta que o envio é uma dica, não uma garantia de indexação. O arquivo deve listar as URLs oficiais que a empresa realmente quer manter públicas.</p></div></div>
+<div class="article-step"><div class="article-step__index"><div class="article-step__badge">04</div></div><div class="article-step__content"><h3>Inspecione as páginas prioritárias</h3><p>Home, páginas de serviço e conteúdos estratégicos podem ser testados individualmente. Se a página estiver disponível para o Google, a ferramenta permite solicitar indexação. Isso coloca a URL na fila de processamento, sem promessa de prazo ou posição.</p></div></div>
+<div class="article-step"><div class="article-step__index"><div class="article-step__badge">05</div></div><div class="article-step__content"><h3>Crie caminhos internos até as páginas importantes</h3><p>O Google informa que a maior parte das novas páginas é descoberta por links. Serviços, artigos, regiões atendidas e conteúdos relacionados precisam estar conectados de maneira coerente, com textos de link que expliquem o destino.</p></div></div>
+<div class="article-step"><div class="article-step__index"><div class="article-step__badge">06</div></div><div class="article-step__content"><h3>Faça cada página responder a uma busca possível</h3><p>Depois da indexação, a pergunta muda. Uma página precisa ter motivo para existir e responder a uma intenção específica. Uma home genérica dificilmente explica com profundidade todos os serviços, cidades e dúvidas que um potencial cliente pode pesquisar.</p></div></div>
+</div>
+<aside class="article-inline-cta article-inline-cta--v21"><div class="article-inline-cta__copy"><span>DIAGNÓSTICO</span><p>Se o site já está publicado e o Search Console mostra mensagens difíceis de interpretar, a TM21 pode revisar indexação, sitemap, canonical, arquitetura e páginas prioritárias antes de sugerir produção de conteúdo.</p></div><a class="button button--primary" href="https://wa.me/5551997890145?text=Ol%C3%A1%2C%20Thiago.%20Li%20o%20artigo%20sobre%20Google%20e%20quero%20avaliar%20a%20indexa%C3%A7%C3%A3o%20do%20meu%20site." rel="noopener noreferrer" target="_blank">Avaliar indexação <span>↗</span></a></aside>
+<h2 id="search-console">O papel do Search Console depois da configuração</h2>
+<p>O Search Console é mais útil como ferramenta de diagnóstico e pesquisa de demanda do que como botão de “colocar no Google”. Depois que a propriedade começa a acumular dados, ela mostra quais consultas exibiram o site, quais páginas receberam impressões, quantos cliques ocorreram, qual foi a CTR e a posição média registrada.</p>
+<p>Essas informações permitem revisar pauta e páginas com evidência do próprio site. Uma página com muitas impressões e CTR baixa pode precisar de title, snippet ou alinhamento melhor com a consulta. Uma busca relevante que começa a gerar impressões pode justificar aprofundamento do conteúdo. O relatório de performance também ajuda a separar tráfego de marca de buscas que apresentam a empresa a pessoas novas.</p>
+<div class="article-data-card"><span class="article-data-card__eyebrow">SEARCH CONSOLE EM 2026</span><p>O painel ficou mais amplo do que o modelo clássico de links azuis. Desde agosto de 2026, o Google disponibiliza globalmente relatórios dedicados à visibilidade em recursos de IA generativa da Pesquisa, como AI Overviews e AI Mode. Em setembro, também começou a liberar filtros para buscas multimodais com imagem. Para um site novo, isso não muda os fundamentos de SEO; muda a quantidade de sinais que podem ser observados.</p><div class="article-data-card__grid"><div><span>Pesquisa</span><strong>Cliques e impressões</strong><p>Consultas, páginas, CTR, posição e dispositivos.</p></div><div><span>IA generativa</span><strong>Visibilidade</strong><p>Páginas e impressões em experiências generativas, quando houver dados.</p></div><div><span>Multimodal</span><strong>Busca por imagem</strong><p>Novos filtros para pesquisas visuais, quando o site receber esse tipo de exposição.</p></div></div></div>
+<h2 id="nao-aparece">Por que um site pode continuar fora do Google mesmo com Search Console</h2>
+<p>As dúvidas observadas em comunidades e comentários se concentram justamente aqui. A propriedade é verificada, o sitemap foi enviado e ainda assim algumas páginas ficam em estados como “Descoberta, não indexada” ou “Rastreada, mas não indexada”. Isso não tem uma causa única.</p>
+<div class="table-scroll"><table class="article-table">
+<caption>Mensagens e situações comuns que merecem investigação antes de produzir mais páginas.</caption>
+<thead><tr><th>Sinal</th><th>Hipóteses úteis</th><th>Ação inicial</th></tr></thead><tbody>
+<tr><td data-label="Sinal"><strong>Descoberta, mas não indexada</strong></td><td data-label="Hipóteses úteis">Site novo, baixa prioridade de rastreamento, páginas pouco conectadas ou volume de URLs maior do que a estrutura sustenta.</td><td data-label="Ação inicial">Rever links internos, sitemap, qualidade das páginas e dar tempo para o rastreamento.</td></tr>
+<tr><td data-label="Sinal"><strong>Rastreada, mas não indexada</strong></td><td data-label="Hipóteses úteis">Conteúdo semelhante a outras páginas, valor limitado, seleção canônica, qualidade ou outros critérios que o relatório não detalha por completo.</td><td data-label="Ação inicial">Comparar a página com outras URLs do site, rever duplicidade e melhorar utilidade antes de simplesmente reenviar várias vezes.</td></tr>
+<tr><td data-label="Sinal"><strong>Google escolheu outra canônica</strong></td><td data-label="Hipóteses úteis">URLs duplicadas, parâmetros, redirecionamentos ou sinais técnicos contraditórios.</td><td data-label="Ação inicial">Conferir canonical, redirects, sitemap e links internos apontando para a versão desejada.</td></tr>
+<tr><td data-label="Sinal"><strong>URL indexada, sem posição relevante</strong></td><td data-label="Hipóteses úteis">A página pode não responder bem à intenção ou enfrentar concorrência mais forte.</td><td data-label="Ação inicial">Pesquisar a SERP, revisar a proposta da página e acompanhar as consultas que já geram impressões.</td></tr>
+<tr><td data-label="Sinal"><strong>Marca aparece, serviço não</strong></td><td data-label="Hipóteses úteis">O Google já reconhece a entidade ou domínio, mas ainda não associa as páginas às consultas comerciais desejadas.</td><td data-label="Ação inicial">Fortalecer páginas de serviço, conteúdo relacionado, links internos e presença local quando aplicável.</td></tr>
+</tbody></table></div>
+<p>Relatos recentes no Reddit em 2026 mostram sites novos com sitemap válido, páginas rastreadas e ainda assim parte do conteúdo aguardando indexação. Esses relatos ajudam a mapear frustrações, mas não substituem o diagnóstico do Search Console. O próprio Google informa que rastreamento e indexação dependem de vários fatores e que não há garantia de quando ou se um URL será indexado.</p>
+<h2 id="ferramenta">Diagnóstico rápido: por que a página ainda não aparece?</h2>
+<p>O formulário abaixo organiza a sequência de verificação. Ele não consulta o Google nem envia dados; serve para apontar o próximo teste com base no que já aparece no Search Console.</p>
+<div class="index-diagnostic" data-index-diagnostic="">
+<div class="index-diagnostic__head"><span class="article-data-card__eyebrow">DIAGNÓSTICO DE INDEXAÇÃO</span><h3>Em qual etapa a URL está?</h3><p>Use as informações do Search Console sempre que possível.</p></div>
+<div class="index-diagnostic__grid">
+<label>O site abre publicamente em HTTPS?<select data-index-field="public"><option value="">Selecione</option><option value="yes">Sim</option><option value="no">Não ou apresenta bloqueio</option></select></label>
+<label>O domínio já está verificado no Search Console?<select data-index-field="gsc"><option value="">Selecione</option><option value="yes">Sim</option><option value="no">Não</option></select></label>
+<label>Na Inspeção de URL, o teste publicado diz que a URL pode ser indexada?<select data-index-field="indexable"><option value="">Selecione</option><option value="yes">Sim</option><option value="no">Não</option><option value="unknown">Ainda não testado</option></select></label>
+<label>A URL já consta no índice do Google?<select data-index-field="indexed"><option value="">Selecione</option><option value="yes">Sim</option><option value="no">Não</option><option value="unknown">Não sei</option></select></label>
+<label>O sitemap foi enviado e está sendo lido?<select data-index-field="sitemap"><option value="">Selecione</option><option value="yes">Sim</option><option value="no">Não</option><option value="unknown">Não sei</option></select></label>
+<label>O problema é aparecer para uma busca de serviço/local?<select data-index-field="ranking"><option value="">Selecione</option><option value="yes">Sim, a URL existe mas não aparece bem</option><option value="no">Não, a URL nem está indexada</option></select></label>
+</div>
+<div class="index-diagnostic__actions"><button class="button button--primary" data-index-submit="" type="button">Ver próximo passo</button><small>A ferramenta organiza diagnóstico. Ela não confirma indexação em tempo real nem promete posição.</small></div>
+<div class="index-diagnostic__result" data-index-result="" hidden="" tabindex="-1"></div>
+</div>
+<h2 id="analytics">Search Console e Analytics respondem perguntas diferentes</h2>
+<p>As duas ferramentas ficam mais úteis quando são tratadas como partes do mesmo funil. O Search Console observa o que aconteceu antes do clique dentro da Pesquisa Google. O Analytics acompanha o comportamento depois que a pessoa entrou no site.</p>
+<div class="metric-pair"><div><h3>Google Search Console</h3><p>Ajuda a entender descoberta e desempenho orgânico.</p><ul><li>consultas que exibem o site;</li><li>impressões e cliques;</li><li>CTR e posição média;</li><li>páginas e dispositivos;</li><li>indexação, sitemaps e inspeção de URL.</li></ul></div><div><h3>Google Analytics</h3><p>Ajuda a entender o que aconteceu dentro da propriedade.</p><ul><li>origem das sessões;</li><li>páginas de entrada;</li><li>engajamento;</li><li>cliques em WhatsApp e outros CTAs;</li><li>início e envio de formulário;</li><li>eventos e leads.</li></ul></div></div>
+<p>O Google permite <a href="https://support.google.com/analytics/answer/10737381?hl=pt-br" rel="noopener noreferrer" target="_blank">vincular Search Console e Analytics</a>. Isso facilita cruzar consulta e landing page com o comportamento posterior do visitante. Para um site comercial, esse cruzamento é mais informativo do que acompanhar apenas posição média.</p>
+<h2 id="local">Para negócio local, aparecer no Google também passa pelo Perfil da Empresa</h2>
+<p>Clínicas, escritórios, prestadores, lojas e outros negócios com atuação regional não deveriam tratar o site como a única superfície do Google. O <a href="https://business.google.com/br/business-profile/" rel="noopener noreferrer" target="_blank">Perfil da Empresa no Google</a> é gratuito e controla informações exibidas na Pesquisa e no Maps, como serviços, horários, telefone, fotos e avaliações.</p>
+<p>O site e o perfil cumprem papéis complementares. O perfil ajuda a empresa a aparecer em buscas locais e no mapa. O site aprofunda serviço, região, prova, dúvidas e conversão. O próprio Google informa que pode usar conteúdo rastreado do site oficial como uma das fontes das informações locais.</p>
+<div class="article-note"><span>PARA NEGÓCIOS LOCAIS</span><p>Uma configuração coerente costuma incluir domínio próprio, páginas que expliquem os serviços e regiões atendidas, Perfil da Empresa atualizado, dados de contato consistentes e links claros para WhatsApp ou formulário. Criar dezenas de páginas mudando apenas o nome da cidade não substitui essa base.</p></div>
+<h2 id="ia">A Pesquisa de 2026 inclui IA, mas a base continua sendo rastreabilidade e conteúdo útil</h2>
+<p>AI Overviews e AI Mode mudaram a forma como algumas consultas são apresentadas. Isso não criou um cadastro separado para “entrar na IA do Google”. A documentação oficial continua orientando sites a trabalhar fundamentos de Search: conteúdo útil, páginas acessíveis, links internos, imagens compreensíveis, dados estruturados coerentes e boa experiência.</p>
+<p>O que mudou em 2026 foi a mensuração. O Search Console passou a oferecer relatórios específicos de visibilidade em recursos generativos. Isso permite acompanhar quais páginas aparecem nessas experiências quando o site começa a receber esse tipo de exposição, sem transformar “GEO” em uma promessa comercial.</p>
+<h2 id="bing">E o Bing e o Microsoft Edge?</h2>
+<p>Microsoft Edge é o navegador; Bing é o mecanismo de busca. O site pode ser descoberto pelo Bing sem cadastro manual, mas o <a href="https://www.bing.com/webmasters/" rel="noopener noreferrer" target="_blank">Bing Webmaster Tools</a> dá controle semelhante ao Search Console para verificar indexação, desempenho e problemas técnicos.</p>
+<p>Para quem já usa Search Console, a Microsoft permite importar sites verificados diretamente para o Bing Webmaster Tools. Também recomenda sitemap e oferece <a href="https://www.bing.com/indexnow" rel="noopener noreferrer" target="_blank">IndexNow</a> para avisar mecanismos participantes sobre URLs novas, atualizadas ou removidas. Em 2026, o Bing Webmaster Tools também passou a mostrar métricas de citações em respostas de IA e Copilot.</p>
+<p>Essa frente merece um guia próprio porque configuração, IndexNow e leitura dos relatórios têm particularidades. Para a TM21, faz sentido configurar o Bing como uma etapa separada depois de consolidar Search Console, sitemap e mensuração do Google.</p>
+<h2 id="tm21">O que entra na publicação de um site pela TM21</h2>
+<p>A publicação não termina no deploy. O recorte básico de SEO e mensuração precisa deixar o site tecnicamente preparado para ser descoberto e permitir acompanhamento posterior.</p>
+<div class="article-grid-points">
+<div><strong>URLs e metadados</strong><p>Title, meta description, headings, canonical e regras de indexação coerentes com cada página.</p></div>
+<div><strong>Sitemap e robots</strong><p>Arquivos acessíveis, com as páginas canônicas que precisam ser descobertas.</p></div>
+<div><strong>Links internos</strong><p>Conexões entre serviços, artigos, regiões e páginas relacionadas para evitar conteúdo isolado.</p></div>
+<div><strong>Search Console</strong><p>Propriedade, sitemap, inspeção das páginas prioritárias e base para leitura posterior das consultas.</p></div>
+<div><strong>Analytics e eventos</strong><p>Medição das visitas e das ações comerciais que importam, como WhatsApp e formulário.</p></div>
+<div><strong>QA antes da indexação</strong><p>Mobile, formulários, links, HTTPS, favicon, imagens, conteúdo e ausência de bloqueios acidentais.</p></div>
+</div>
+<p>Isso cria a base. SEO contínuo, produção editorial, novas páginas e acompanhamento recorrente são etapas posteriores quando houver demanda e escopo para esse trabalho.</p>
+<div class="article-faq-intro" id="faq"><span>PERGUNTAS FREQUENTES</span><h2>Perguntas frequentes sobre colocar um site no Google</h2><p>As dúvidas abaixo cobrem os pontos que mais confundem publicação, indexação e posicionamento.</p></div>
+<div class="article-faq">
+<details open=""><summary>Quanto tempo demora para um site novo aparecer no Google?</summary><div class="article-faq__answer"><p>Não existe prazo garantido. O Google informa que páginas novas podem levar de alguns dias a algumas semanas para serem rastreadas e indexadas. Uma solicitação no Search Console entra na fila, mas não garante indexação.</p></div></details>
+<details><summary>É gratuito colocar um site no Google Search Console?</summary><div class="article-faq__answer"><p>Sim. O Search Console é uma ferramenta gratuita do Google. Verificar a propriedade permite acompanhar indexação e desempenho; o cadastro não compra posição nem substitui SEO.</p></div></details>
+<details><summary>Precisa pedir indexação de todas as páginas?</summary><div class="article-faq__answer"><p>Não. Para um conjunto de páginas, o sitemap e os links internos são a base. A solicitação manual é mais útil para URLs prioritárias novas ou que tiveram alteração relevante.</p></div></details>
+<details><summary>O sitemap garante que a página será indexada?</summary><div class="article-faq__answer"><p>Não. O Google descreve o sitemap como uma dica para descoberta e rastreamento. A página ainda precisa estar acessível e ser selecionada para o índice.</p></div></details>
+<details><summary>O site aparece pelo nome da empresa, mas não pelo serviço. O que falta?</summary><div class="article-faq__answer"><p>Esse cenário normalmente indica que a indexação básica já existe. O trabalho passa para páginas de serviço, intenção de busca, concorrência, conteúdo, links e, quando a pesquisa é local, Perfil da Empresa e sinais regionais.</p></div></details>
+<details><summary>Search Console e Google Analytics são a mesma coisa?</summary><div class="article-faq__answer"><p>Não. Search Console mostra como o site aparece e recebe cliques na Pesquisa Google. Analytics acompanha o comportamento depois da visita. As duas propriedades podem ser vinculadas.</p></div></details>
+<details><summary>Como fazer o favicon aparecer nos resultados do Google?</summary><div class="article-faq__answer"><p>O site precisa declarar um favicon rastreável na página inicial. O Google recomenda imagem quadrada e maior que 48 × 48 px para boa apresentação, mas a exibição não é garantida e pode depender de novo rastreamento.</p></div></details>
+<details><summary>Precisa configurar o Bing separadamente?</summary><div class="article-faq__answer"><p>Não é requisito para aparecer no Google. Para acompanhar a presença no ecossistema Microsoft, vale configurar o Bing Webmaster Tools. Quem já tem Search Console pode importar a propriedade verificada e depois revisar sitemap, indexação e IndexNow.</p></div></details>
+</div>
+<div class="article-share"><span>COMPARTILHAR</span><h2>Gostou? Compartilhe:</h2><div aria-label="Compartilhar artigo" class="article-share__links"><a aria-label="Compartilhar no WhatsApp" href="https://wa.me/?text=Como%20colocar%20um%20site%20no%20Google%3F%20https%3A%2F%2Ftm21.com.br%2Fblog%2Fcomo-colocar-site-no-google%2F" rel="noopener noreferrer" target="_blank">WA</a><a aria-label="Compartilhar no Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftm21.com.br%2Fblog%2Fcomo-colocar-site-no-google%2F" rel="noopener noreferrer" target="_blank">f</a><a aria-label="Compartilhar no LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftm21.com.br%2Fblog%2Fcomo-colocar-site-no-google%2F" rel="noopener noreferrer" target="_blank">in</a><a aria-label="Compartilhar no X" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftm21.com.br%2Fblog%2Fcomo-colocar-site-no-google%2F&amp;text=Como%20colocar%20um%20site%20no%20Google%3F" rel="noopener noreferrer" target="_blank">X</a></div></div>
+<div class="article-sources"><span>FONTES CONSULTADAS</span><ul>
+<li><a href="https://support.google.com/webmasters/answer/9012289?hl=pt-BR" rel="noopener noreferrer" target="_blank">Google Search Console, Ferramenta de inspeção de URL</a>.</li>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=pt-br" rel="noopener noreferrer" target="_blank">Google Search Central, criação e envio de sitemap</a>.</li>
+<li><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=pt-br" rel="noopener noreferrer" target="_blank">Google Search Central, Guia de SEO para iniciantes</a>.</li>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/canonicalization?hl=pt" rel="noopener noreferrer" target="_blank">Google Search Central, canonização de URLs</a>.</li>
+<li><a href="https://support.google.com/analytics/answer/10737381?hl=pt-br" rel="noopener noreferrer" target="_blank">Google Analytics, integração com Search Console</a>.</li>
+<li><a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports?hl=pt-br" rel="noopener noreferrer" target="_blank">Google Search Central, relatórios de performance de IA generativa em 2026</a>.</li>
+<li><a href="https://business.google.com/br/business-profile/" rel="noopener noreferrer" target="_blank">Perfil da Empresa no Google</a>.</li>
+<li><a href="https://blogs.bing.com/webmaster/2025/6/Start-Using-Bing-Webmaster-Tools-to-Improve-Your-Site-Visibility/" rel="noopener noreferrer" target="_blank">Microsoft Bing, Bing Webmaster Tools</a>.</li>
+<li><a href="https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/" rel="noopener noreferrer" target="_blank">Microsoft Bing, AI Performance no Bing Webmaster Tools, 2026</a>.</li>
+<li><a href="https://www.reddit.com/r/SEO/comments/1s4fczc/new_site_not_getting_indexed_after_3_weeks_should/" rel="noopener noreferrer" target="_blank">Reddit, discussão de março de 2026 sobre site novo e páginas ainda não indexadas</a>. Usado como evidência qualitativa.</li>
+<li><a href="https://www.reddit.com/r/TechSEO/comments/1uzt1t0/crawled_currently_not_indexed_for_almost_2_months/" rel="noopener noreferrer" target="_blank">Reddit, discussão de julho de 2026 sobre “Rastreada, mas não indexada”</a>. Usado como evidência qualitativa.</li>
+</ul></div>
+<div class="article-related article-related--v21"><span>CONTINUE LENDO</span><a href="/quanto-custa-criar-um-site/">Quanto custa criar um site profissional? <span>↗</span></a><a href="/blog/quanto-tempo-demora-criar-site/">Quanto tempo demora para criar um site? <span>↗</span></a><a href="/blog/instagram-substitui-site/">Instagram substitui um site? <span>↗</span></a><a href="/criacao-de-sites/">Criação de sites profissionais <span>↗</span></a></div>
+</article>
+<aside aria-label="Recursos relacionados" class="article-sidecards">
+<div class="article-sidecards__card article-sidecards__card--dark"><span class="article-sidecards__tag">Indexação</span><h3>O site está no ar, mas não aparece?</h3><p>Vale separar bloqueio técnico, página ainda não indexada e problema de posicionamento antes de produzir mais conteúdo.</p><a class="button button--primary" href="https://wa.me/5551997890145?text=Ol%C3%A1%2C%20Thiago.%20Li%20o%20artigo%20sobre%20Google%20e%20quero%20avaliar%20a%20indexa%C3%A7%C3%A3o%20do%20meu%20site." rel="noopener noreferrer" target="_blank">Avaliar o site <span>↗</span></a></div>
+<div class="article-sidecards__card"><span class="article-sidecards__tag">Ferramentas oficiais</span><h3>Quatro painéis que valem conhecer</h3><ul><li><a href="https://search.google.com/search-console/" rel="noopener noreferrer" target="_blank">Google Search Console</a></li><li><a href="https://analytics.google.com/" rel="noopener noreferrer" target="_blank">Google Analytics</a></li><li><a href="https://business.google.com/br/business-profile/" rel="noopener noreferrer" target="_blank">Perfil da Empresa no Google</a></li><li><a href="https://www.bing.com/webmasters/" rel="noopener noreferrer" target="_blank">Bing Webmaster Tools</a></li></ul></div>
+</aside>
+</div>
+</section>
+<section class="article-contact section-light" id="falar-sobre-projeto">
+<div class="shell article-contact__grid">
+<div class="article-contact__intro article-contact__intro--v21"><p class="eyebrow">CONTATO</p><h2>Seu site já foi publicado e ainda não aparece como deveria?</h2><p>Envie o domínio e descreva o que acontece hoje. A TM21 pode revisar a base técnica, o status de indexação e as páginas que deveriam ser encontradas antes de propor uma próxima etapa.</p><a class="text-link" href="https://wa.me/5551997890145?text=Ol%C3%A1%2C%20Thiago.%20Li%20o%20artigo%20sobre%20Google%20e%20quero%20avaliar%20a%20indexa%C3%A7%C3%A3o%20do%20meu%20site." rel="noopener noreferrer" target="_blank">Prefere WhatsApp? Falar por lá <span>↗</span></a></div>
+<form class="contact-form article-contact__form" id="contactForm" novalidate="">
+<div class="contact-form__header"><span>Enviar uma mensagem</span><span class="contact-form__code">TM21 / BLOG</span></div>
+<div class="form-grid">
+<div class="field"><label for="name">Nome *</label><input autocomplete="name" id="name" name="name" required="" type="text"/></div>
+<div class="field"><label for="email">E-mail *</label><input autocomplete="email" id="email" name="email" required="" type="email"/></div>
+<div class="field"><label for="company">Empresa ou projeto</label><input autocomplete="organization" id="company" name="company" type="text"/></div>
+<div class="field"><label for="phone">WhatsApp</label><div class="phone-control"><span aria-hidden="true" class="phone-prefix"><svg aria-label="Brasil" class="phone-prefix__flag" role="img" viewbox="0 0 28 20"><rect fill="#009B3A" height="20" rx="2" width="28"></rect><path d="M14 2.8 24.2 10 14 17.2 3.8 10 14 2.8Z" fill="#FFDF00"></path><circle cx="14" cy="10" fill="#002776" r="4.1"></circle></svg><strong>+55</strong></span><input autocomplete="tel-national" id="phone" inputmode="numeric" maxlength="15" name="phone" placeholder="(51) 99999-9999" type="tel"/></div><small class="field-hint" id="phoneHint">DDD e número, se quiser retorno por WhatsApp.</small></div>
+<div class="field field--full"><label for="subject">Quero conversar sobre *</label><select id="subject" name="subject" required=""><option value="">Selecione</option><option value="indexacao">Site não aparece no Google</option><option value="novo">Criação ou reformulação de site</option><option value="seo">SEO, Google ou conteúdo</option><option value="outro">Outro projeto digital</option></select></div>
+<div class="field field--full"><label for="message">Mensagem *</label><textarea id="message" name="message" placeholder="Conte o domínio, o que já foi configurado e qual busca ou página está apresentando problema." required="" rows="6"></textarea></div>
+</div>
+<input aria-hidden="true" autocomplete="off" class="form-honeypot" name="_honey" tabindex="-1" type="text"/>
+<p class="form-note" id="formNote">Os dados enviados serão usados para responder ao contato. Consulte a <a href="/privacidade/">Política de Privacidade</a>.</p>
+<button class="button button--dark contact-form__submit" id="contactSubmit" type="submit"><span class="contact-form__submit-label">Enviar mensagem</span><span aria-hidden="true">↗</span></button>
+<p aria-live="polite" class="form-feedback" id="formFeedback" role="status"></p>
+</form>
+</div>
+</section>
+</main>
+<footer class="footer section-dark"><div class="shell footer__grid"><div class="footer__brand"><span class="brand">TM21</span><p>Thiago Martins</p><small>Negócios, produto e tecnologia aplicada.</small></div><nav aria-label="Navegação do rodapé" class="footer__nav"><a href="/criacao-de-sites/">Criação de sites</a><a href="/landing-pages/">Landing pages</a><a href="/sites-institucionais/">Sites institucionais</a><a href="/site-para-advogados/">Site para advogados</a><a href="/site-para-dentistas/">Site para dentistas</a><a href="/blog/">Blog</a></nav><div class="footer__contact"><nav aria-label="Informações e ajuda" class="footer__help"><strong>Informações e ajuda</strong><a href="/duvidas-frequentes/">Dúvidas frequentes</a><a href="/privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><button class="cookie-settings-link" data-cookie-settings="" type="button">Preferências de cookies</button></nav><a href="tel:+5551997890145">+55 51 99789-0145</a></div></div><div class="shell footer__bottom"><span>© 2026 TM21</span><span>RS · SC · Brasil</span><a aria-label="Voltar ao topo da página" class="back-to-top" href="#top">Voltar ao topo <span aria-hidden="true">↑</span></a></div></footer>
+<a aria-label="Conversar com Thiago pelo WhatsApp" class="whatsapp-float is-visible" href="https://wa.me/5551997890145?text=Ol%C3%A1%2C%20Thiago.%20Li%20o%20artigo%20sobre%20colocar%20um%20site%20no%20Google%20e%20gostaria%20de%20conversar%20sobre%20meu%20site." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 3.4a8.5 8.5 0 0 0-7.45 12.6L3.4 20.6l4.72-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.48 12.64l-.28-.16-2.37.55.58-2.3-.18-.29A6.8 6.8 0 0 1 12 5.1Zm-2.2 3.1c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.01-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.3-.73-1.77-.2-.47-.4-.4-.54-.4h-.46Z"></path></svg><span>Conversar</span></a>
+<script>
+(() => {
+  const form = document.querySelector('[data-index-diagnostic]');
+  if (!form) return;
+  const result = form.querySelector('[data-index-result]');
+  const button = form.querySelector('[data-index-submit]');
+  const get = (name) => form.querySelector(`[data-index-field="${name}"]`)?.value || '';
+  button?.addEventListener('click', () => {
+    const selects = [...form.querySelectorAll('select[data-index-field]')];
+    const missing = selects.filter((select) => !select.value);
+    selects.forEach((select) => select.removeAttribute('aria-invalid'));
+    if (missing.length) {
+      missing.forEach((select) => select.setAttribute('aria-invalid','true'));
+      missing[0].focus();
+      result.hidden = false;
+      result.innerHTML = '<span>DIAGNÓSTICO</span><strong>Faltam algumas respostas.</strong><p>Preencha todos os campos para organizar o próximo teste.</p>';
+      return;
+    }
+    let title = 'A página parece indexável. O próximo problema pode ser posicionamento.';
+    let copy = 'Se a URL já está no Google e o objetivo é aparecer por um serviço, cidade ou dúvida específica, a prioridade passa a ser intenção de busca, qualidade da página, concorrência, links e sinais locais quando aplicáveis.';
+    if (get('public') === 'no') {
+      title = 'Primeiro corrija o acesso público ao site.';
+      copy = 'O Google precisa conseguir abrir a página de produção. HTTPS, tela de manutenção, autenticação, respostas HTTP e redirecionamentos vêm antes de qualquer pedido de indexação.';
+    } else if (get('gsc') === 'no') {
+      title = 'Configure uma propriedade no Search Console.';
+      copy = 'A página pode ser descoberta sem Search Console, mas a ferramenta é necessária para diagnosticar indexação com precisão, enviar sitemap e inspecionar URLs. Para um domínio completo, a propriedade de domínio reúne protocolos e subdomínios.';
+    } else if (get('indexable') === 'no') {
+      title = 'Existe um bloqueio de indexação a resolver.';
+      copy = 'Use o teste do URL publicado para identificar robots.txt, noindex, resposta HTTP, redirecionamento ou outro problema de acesso. Solicitar indexação antes da correção não resolve o bloqueio.';
+    } else if (get('indexable') === 'unknown') {
+      title = 'Faça o teste do URL publicado.';
+      copy = 'Abra a Inspeção de URL no Search Console e rode o teste em tempo real. Ele ajuda a separar uma página tecnicamente bloqueada de uma página que está acessível, mas ainda não foi selecionada para o índice.';
+    } else if (get('indexed') === 'no' || get('indexed') === 'unknown') {
+      if (get('sitemap') !== 'yes') {
+        title = 'A URL é indexável; organize descoberta e sitemap.';
+        copy = 'Envie um sitemap com as URLs canônicas, garanta links internos até a página e solicite indexação das URLs prioritárias. Depois, acompanhe o status sem repetir solicitações como se fossem garantia.';
+      } else {
+        title = 'A URL é indexável, mas ainda não entrou no índice.';
+        copy = 'Com sitemap válido e acesso liberado, vale revisar duplicidade, canonical, utilidade do conteúdo, links internos e o tempo desde a publicação. “Rastreada, mas não indexada” não tem uma causa única.';
+      }
+    } else if (get('ranking') === 'no') {
+      title = 'A página já está indexada.';
+      copy = 'Se o objetivo era apenas confirmar presença no índice, a etapa está concluída. O próximo acompanhamento deve usar consultas, impressões, cliques e páginas no Search Console.';
+    }
+    result.hidden = false;
+    result.innerHTML = `<span>PRÓXIMO PASSO</span><strong>${title}</strong><p>${copy}</p><small>Diagnóstico editorial baseado nas respostas informadas. A validação definitiva deve ser feita no Search Console e no próprio site.</small>`;
+    result.focus({preventScroll:true});
+    result.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'nearest'});
+  });
+})();
+</script><script defer="" src="/js/article.js"></script>
+<script defer="" src="/js/main.js"></script>
+<script defer="" src="/js/analytics.js"></script>
+</body>
+</html>
